@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Satisfactory - Game Details</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="../../../Downloads/web 2.0/css/bootstrap-4.4.1.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #240046;
+      color: #fbf7ea;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding-top: 70px; /* navbar height */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      background-color: #240046 !important;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+      color: #fbf7ea !important;
+    }
+    .navbar .nav-link:hover,
+    .navbar .navbar-brand:hover {
+      color: #b185db !important;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto 3rem auto;
+      padding: 0;
+      color: #fbf7ea;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .title-rating-buy {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 0.5rem;
+    }
+    .game-title {
+      font-size: 2.75rem;
+      font-weight: 700;
+      color: #b185db;
+      flex: 1 1 auto;
+    }
+    .game-rating {
+      background-color: #b185db;
+      color: #240046;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      flex: 0 0 auto;
+      user-select: none;
+    }
+    .buy-button {
+      background-color: #b185db;
+      color: #240046;
+      font-weight: 700;
+      padding: 0.6rem 1.5rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      flex: 0 0 auto;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+    }
+    .buy-button:hover {
+      background-color: #8a4fc6;
+      color: #fff;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin: 0 0.5rem;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+      display: block;
+    }
+    section {
+      padding: 0 0.5rem;
+    }
+    section h2 {
+      font-weight: 700;
+      color: #b185db;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    section p, section ul {
+      color: #e0d9f2;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    section ul {
+      padding-left: 1.2rem;
+    }
+    footer.footer {
+      background-color: #240046;
+      color: #000000;
+      padding: 1rem 0;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: auto;
+    }
+    footer.footer a {
+      color: #000000;
+      text-decoration: underline;
+    }
+    footer.footer a:hover {
+      color: #b185db;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <a href="index.html" class="navbar-brand">
+      <img src="../../../Downloads/web 2.0/images/LETTUCE.png" class="img-fluid rounded" alt="RYKEN Studios Logo" width="200" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent1"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html">STORE <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-link" href="lettucemods.html">MODS</a></li>
+        <li class="nav-item"><a class="nav-link" href="lettucesociety.html">COMMUNITY</a></li>
+        <li class="nav-item"><a class="nav-link" href="lettucesupport.html">SUPPORT</a></li>
+        <li class="nav-item"><a class="nav-link" href="lettuceaboutus.html">ABOUT</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <a href="lettucelogin.html" class="ml-3">
+          <img src="images for web design/user.jpg" class="img-fluid rounded-circle" alt="User Profile" width="40" height="40" style="object-fit: cover;" />
+        </a>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <div class="title-rating-buy">
+      <h1 class="game-title">Satisfactory</h1>
+      <div class="game-rating">Rating: 9.0 / 10</div>
+      <a href="payment.html" class="buy-button" aria-label="Buy Halo 5: Guardians" role="button" target="_blank" rel="noopener noreferrer">
+  Buy Game
+</a>
+
+    </div>
+
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/watch?v=Jt4XOPiPJHs" 
+        frameborder="0" 
+        allowfullscreen 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        title="Satisfactory Official Trailer">
+      </iframe>
+    </div>
+
+    <section>
+      <h2>About the Game</h2>
+      <p>
+        Satisfactory is a first-person open-world factory building game developed by Coffee Stain Studios. Explore an alien planet, gather resources, and build complex automated factories to progress through the game.
+      </p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Expansive open-world exploration</li>
+        <li>Complex factory building and automation</li>
+        <li>Multiplayer co-op with friends</li>
+        <li>Resource gathering and crafting</li>
+        <li>Regular updates with new content</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>System Requirements</h2>
+      <p><strong>Platform:</strong> Windows PC</p>
+      <p><strong>Storage:</strong> Approximately 20 GB</p>
+      <p><strong>Processor:</strong> Intel Core i5 or equivalent</p>
+      <p><strong>Memory:</strong> 8 GB RAM</p>
+      <p><strong>Graphics:</strong> Nvidia GTX 770 or equivalent</p>
+      <p><strong>Internet:</strong> Required for multiplayer and updates</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 RYKEN Studios. All rights reserved.<br />
+    LETTUCE STORE/LETTUCE SOCIETY created using Adobe Dreamweaver and Bootstrap
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="../../../Downloads/web 2.0/js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

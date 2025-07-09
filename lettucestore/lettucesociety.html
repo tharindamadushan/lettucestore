@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+  .navbar .navbar-brand,
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    color: #fbf7ea !important;
+  }
+  .navbar .nav-link.disabled {
+    color: #fbf7ea !important;
+    opacity: 0.6;
+  }
+  .navbar .nav-link:focus, 
+  .navbar .nav-link:hover,
+  .navbar .navbar-brand:focus,
+  .navbar .navbar-brand:hover {
+    color: #b185db !important; /* Optional: darker shade on hover */
+  }
+
+  .navbar {
+    background-color: #240046 !important;
+  }
+</style>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap - Prebuilt Layout</title>
+	<style>
+  .iconbox-navbar {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background: #e0aaff;
+    border-radius: 0.4em;
+    min-width: 2em;
+    max-width: 2.5em;
+    margin-right: 0.5em;
+  }
+  .iconbox-navbar i {
+    color: #240046;
+    font-size: 1.5em;
+    line-height: 1;
+  }
+  @media (max-width: 991.98px) {
+    .iconbox-navbar {
+      min-width: 1.5em;
+      max-width: 2em;
+    }
+    .iconbox-navbar i {
+      font-size: 1.1em;
+    }
+  }
+</style>
+
+
+  <!-- Bootstrap -->
+  <link href="../../../Downloads/web 2.0/css/bootstrap-4.4.1.css" rel="stylesheet">
+
+	
+</head>
+  <body style="padding-top: 70px; background-color: #240046;">
+	  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="../../../Downloads/web 2.0/js/bootstrap-4.4.1.js"></script>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark"><a href="index.html"><img src="../../../Downloads/web 2.0/images/LETTUCE.png" class="img-fluid rounded" alt="Placeholder image" width="200"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active"><a class="nav-link" href="index.html">STORE <span class="sr-only">(current)</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="lettucemods.html">MODS</a></li>
+      <li class="nav-item"><a class="nav-link" href="lettucesociety.html">COMMUNITY</a></li>
+      <li class="nav-item"><a class="nav-link" href="lettucesupport.html">SUPPORT</a></li>
+      <li class="nav-item"><a class="nav-link" href="lettuceaboutus.html">ABOUT</a></li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <a href="lettucelogin.html"><img src="images for web design/user.jpg" class="img-fluid rounded-circle" alt="Placeholder image"></a>
+    </form>
+  </div>
+</nav>
+<img src="images for web design/LETTUCE SOCIETY.jpg" class="img-fluid" alt="Placeholder image">
+<div class="container-fluid" style="height: 550px; padding: 0 1rem;">
+  <div class="row h-100">
+    <!-- Left: Chat Rooms (1/4 width) -->
+    <div class="col-12 col-lg-3 d-flex flex-column" style="background-color: #240046; color: #ffffff; height: 100%; padding: 1rem; overflow-y: auto;">
+      <button id="addGroupBtn" class="btn btn-outline-light mb-3" aria-label="Add new group chat">+ Add New Group Chat</button>
+      <h5 class="mb-3 font-weight-bold">Chat Rooms</h5>
+      <div id="chatRoomsList" class="flex-grow-1" role="list" aria-label="Chat rooms list">
+        <div class="chat-room active" data-room="starwars" role="listitem" tabindex="0" aria-selected="true">Star Wars Battlefront</div>
+        <div class="chat-room" data-room="gta5" role="listitem" tabindex="0" aria-selected="false">Grand Theft Auto 5</div>
+        <div class="chat-room" data-room="deathstranding" role="listitem" tabindex="0" aria-selected="false">Death Stranding</div>
+        <div class="chat-room" data-room="ratchet" role="listitem" tabindex="0" aria-selected="false">Ratchet and Clank</div>
+      </div>
+    </div>
+
+    <!-- Right: Group Chat (3/4 width) -->
+    <div class="col-12 col-lg-9 d-flex flex-column" style="background-color: #ffffff; color: #000000; height: 100%; padding: 1rem; border-radius: 0.25rem; position: relative;">
+      <h5 id="chatRoomTitle" class="mb-3 font-weight-bold" aria-live="polite">Star Wars Battlefront</h5>
+      <div id="messages" style="flex-grow: 1; overflow-y: auto; padding: 1rem; border-radius: 0.5rem; background: #f5f5f7; box-shadow: inset 0 0 5px rgba(0,0,0,0.1);" role="log" aria-live="polite" aria-relevant="additions">
+        <!-- Chat messages will be dynamically inserted here -->
+      </div>
+
+      <form id="chatForm" class="d-flex mt-3 align-items-center" autocomplete="off" style="border: 1px solid #ccc; border-radius: 9999px; padding: 0.25rem 0.5rem 0.25rem 1rem; background: #fff;" aria-label="Send a message">
+        <button type="button" id="emojiBtn" class="btn btn-light mr-2" aria-label="Open emoji picker" title="Emoji picker" style="font-size: 1.5rem; line-height: 1; padding: 0 0.5rem;">😊</button>
+
+        <!-- File upload buttons -->
+        <label for="imageUpload" class="btn btn-light mr-2" title="Upload image" style="font-size:1.3rem; cursor:pointer;">🖼️</label>
+        <input type="file" id="imageUpload" accept="image/*" style="display:none" multiple />
+
+        <label for="fileUpload" class="btn btn-light mr-2" title="Upload file" style="font-size:1.3rem; cursor:pointer;">📎</label>
+        <input type="file" id="fileUpload" style="display:none" multiple />
+
+        <input type="text" id="chatInput" class="form-control border-0" placeholder="Type your message..." required style="box-shadow:none; outline:none;" aria-required="true" aria-describedby="sendButton" />
+        <button type="submit" class="btn btn-primary ml-2 rounded-pill px-4" id="sendButton">Send</button>
+      </form>
+
+      <!-- Emoji picker popup -->
+      <div id="emojiPicker" style="display:none; position: absolute; bottom: 70px; right: 20px; background: #fff; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2); max-width: 300px; max-height: 200px; overflow-y: auto; z-index: 1000;">
+        <!-- Emojis inserted here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Reuse previous styles for chat rooms, messages, avatars, etc. */
+  /* Hover effects */
+  .chat-room:hover, .chat-room:focus {
+    background-color: #b185db;
+    color: #240046;
+  }
+  .chat-room.active {
+    background-color: #b185db;
+    color: #240046;
+    font-weight: 700;
+  }
+  .message:hover {
+    background-color: rgba(177, 133, 219, 0.1);
+    border-radius: 8px;
+  }
+  /* Emoji picker */
+  #emojiPicker span {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px 8px;
+    user-select: none;
+    transition: background-color 0.2s ease;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  #emojiPicker span:hover {
+    background-color: #b185db;
+
+    color: #240046;
+  }
+  /* Uploaded image preview in chat */
+  .message img.uploaded-image {
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 12px;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  }
+  /* Uploaded file link */
+  .message a.file-link {
+    display: inline-block;
+    margin-top: 0.3rem;
+    color: #6f42c1;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  // Emoji list (subset)
+  const emojis = ["😀","😁","😂","🤣","😃","😄","😅","😆","😉","😊","😋","😎","😍","😘","🥰","😗","😙","😚"];
+
+  const chatRoomsList = document.getElementById("chatRoomsList");
+  const messagesDiv = document.getElementById("messages");
+  const chatRoomTitle = document.getElementById("chatRoomTitle");
+  const chatForm = document.getElementById("chatForm");
+  const chatInput = document.getElementById("chatInput");
+  const addGroupBtn = document.getElementById("addGroupBtn");
+  const emojiBtn = document.getElementById("emojiBtn");
+  const emojiPicker = document.getElementById("emojiPicker");
+  const imageUpload = document.getElementById("imageUpload");
+  const fileUpload = document.getElementById("fileUpload");
+
+  let currentRoom = "starwars";
+
+  // Chat data with support for messages and attachments
+  const chatData = {
+    starwars: [
+      { user: "Luke", text: "May the Force be with you! 😀", time: "10:15 AM" },
+      { user: "Leia", text: "We must fight the Empire.", time: "10:17 AM" },
+    ],
+    gta5: [
+      { user: "Michael", text: "Let's plan the heist.", time: "11:00 AM" },
+      { user: "Franklin", text: "I'm ready when you are.", time: "11:05 AM" },
+    ],
+    deathstranding: [
+      { user: "Sam", text: "Bridges are important.", time: "9:30 AM" },
+      { user: "Fragile", text: "Stay safe out there.", time: "9:35 AM" },
+    ],
+    ratchet: [
+      { user: "Ratchet", text: "Let's save the galaxy!", time: "2:00 PM" },
+      { user: "Clank", text: "I'm with you, Ratchet.", time: "2:05 PM" },
+    ],
+  };
+
+  // Generate initials for avatar
+  function getInitials(name) {
+    return name.split(' ').map(n => n[0].toUpperCase()).join('');
+  }
+
+  // Render chat messages with support for images/files
+  function renderMessages(room) {
+    messagesDiv.innerHTML = "";
+    const msgs = chatData[room] || [];
+    msgs.forEach(({ user, text, time, imageUrl, fileUrl, fileName }) => {
+      const msgDiv = document.createElement("div");
+      msgDiv.classList.add("message");
+      if (user === "You") msgDiv.classList.add("you");
+
+      const avatar = document.createElement("div");
+      avatar.classList.add("avatar");
+      avatar.textContent = getInitials(user);
+      avatar.title = user;
+
+      const content = document.createElement("div");
+      content.classList.add("content");
+
+      if (text) {
+        const textNode = document.createTextNode(text);
+        content.appendChild(textNode);
+      }
+
+      // If image attachment
+      if (imageUrl) {
+        const img = document.createElement("img");
+        img.src = imageUrl;
+        img.alt = "Uploaded image";
+        img.className = "uploaded-image";
+        content.appendChild(document.createElement("br"));
+        content.appendChild(img);
+      }
+
+      // If file attachment
+      if (fileUrl) {
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.className = "file-link";
+        link.textContent = fileName || "Download file";
+        content.appendChild(document.createElement("br"));
+        content.appendChild(link);
+      }
+
+      const timestamp = document.createElement("div");
+      timestamp.classList.add("timestamp");
+      timestamp.textContent = time || "";
+
+      content.appendChild(timestamp);
+      msgDiv.appendChild(avatar);
+      msgDiv.appendChild(content);
+      messagesDiv.appendChild(msgDiv);
+    });
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  // Emoji picker render
+  function renderEmojiPicker() {
+    emojiPicker.innerHTML = '';
+    emojis.forEach(emoji => {
+      const span = document.createElement('span');
+      span.textContent = emoji;
+      span.title = emoji;
+      span.addEventListener('click', () => {
+        chatInput.value += emoji;
+        chatInput.focus();
+        emojiPicker.style.display = 'none';
+      });
+      emojiPicker.appendChild(span);
+    });
+  }
+
+  // Toggle emoji picker
+  emojiBtn.addEventListener('click', () => {
+    if (emojiPicker.style.display === 'block') {
+      emojiPicker.style.display = 'none';
+    } else {
+      emojiPicker.style.display = 'block';
+      renderEmojiPicker();
+    }
+  });
+
+  // Close emoji picker when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!emojiPicker.contains(e.target) && e.target !== emojiBtn) {
+      emojiPicker.style.display = 'none';
+    }
+  });
+
+  // Handle chat room switching
+  chatRoomsList.addEventListener("click", e => {
+    if (e.target.classList.contains("chat-room")) {
+      [...chatRoomsList.children].forEach(room => {
+        room.classList.remove("active");
+        room.setAttribute("aria-selected", "false");
+      });
+      e.target.classList.add("active");
+      e.target.setAttribute("aria-selected", "true");
+      currentRoom = e.target.dataset.room;
+      chatRoomTitle.textContent = e.target.textContent;
+      renderMessages(currentRoom);
+    }
+  });
+
+  // Handle message send (text only)
+  chatForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const msg = chatInput.value.trim();
+    if (!msg) return;
+    addMessage({ user: "You", text: msg });
+    chatInput.value = "";
+    chatInput.focus();
+
+  });
+
+  // Add message helper
+  function addMessage(message) {
+    if (!chatData[currentRoom]) chatData[currentRoom] = [];
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+    message.time = timeString;
+    chatData[currentRoom].push(message);
+    renderMessages(currentRoom);
+  }
+
+  // Handle image upload
+  imageUpload.addEventListener('change', (e) => {
+    const files = Array.from(e.target.files);
+    files.forEach(file => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        addMessage({ user: "You", imageUrl: reader.result });
+
+      };
+      reader.readAsDataURL(file);
+    });
+    e.target.value = ''; // Reset input
+  });
+
+  // Handle file upload
+  fileUpload.addEventListener('change', (e) => {
+    const files = Array.from(e.target.files);
+    files.forEach(file => {
+      // For demo, use local URL (in real app, upload to server and get URL)
+      const fileUrl = URL.createObjectURL(file);
+      addMessage({ user: "You", fileUrl, fileName: file.name });
+
+    });
+    e.target.value = ''; // Reset input
+  });
+
+  // Simulated AI response for presentation/demo
+
+    setTimeout(() => {
+      const aiReply = {
+        user: "AI Bot",
+        text: `You said: "${userMsg}". How can I assist you further?`,
+        time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+      };
+      addMessage(aiReply);
+    }, 1500);
+  }
+
+  // Add new group chat
+  addGroupBtn.addEventListener("click", () => {
+    const groupName = prompt("Enter new group chat name:");
+    if (groupName && groupName.trim() !== "") {
+      const key = groupName.toLowerCase().replace(/\s+/g, '-');
+      if (!chatData[key]) {
+        chatData[key] = [];
+        const newRoom = document.createElement("div");
+        newRoom.className = "chat-room p-2 mb-2 rounded";
+        newRoom.dataset.room = key;
+        newRoom.textContent = groupName;
+        newRoom.style.cursor = "pointer";
+        chatRoomsList.appendChild(newRoom);
+      } else {
+        alert("Group chat already exists.");
+      }
+    }
+  });
+
+  // Initialize
+  chatRoomsList.querySelector(".chat-room").classList.add("active");
+  renderMessages(currentRoom);
+</script>
+
+
+<style>
+  /* Chat rooms styling */
+  #chatRoomsList {
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-room {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  .chat-room:hover {
+    background-color: #b185db;
+    color: #240046;
+  }
+  .chat-room.active {
+    background-color: #b185db;
+    color: #240046;
+    font-weight: 700;
+  }
+
+  /* Chat messages styling */
+  .message {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+  .message .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #b185db;
+    color: #240046;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .message .content {
+    max-width: 75%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    line-height: 1.3;
+    color: #000000;
+  }
+  /* Different style for messages sent by "You" */
+  .message.you {
+    flex-direction: row-reverse;
+  }
+  .message.you .avatar {
+    background-color: #6f42c1;
+    color: #fff;
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+  .message.you .content {
+    background-color: #dcd6f7;
+    color: #240046;
+    border-bottom-right-radius: 0;
+  }
+</style>
+
+<script>
+  const chatData = {
+    starwars: [
+      { user: "Luke", text: "May the Force be with you!" },
+      { user: "Leia", text: "We must fight the Empire." },
+    ],
+    gta5: [
+      { user: "Michael", text: "Let's plan the heist." },
+      { user: "Franklin", text: "I'm ready when you are." },
+    ],
+    deathstranding: [
+      { user: "Sam", text: "Bridges are important." },
+      { user: "Fragile", text: "Stay safe out there." },
+    ],
+    ratchet: [
+      { user: "Ratchet", text: "Let's save the galaxy!" },
+      { user: "Clank", text: "I'm with you, Ratchet." },
+    ],
+  };
+
+  const chatRoomsList = document.getElementById("chatRoomsList");
+  const messagesDiv = document.getElementById("messages");
+  const chatRoomTitle = document.getElementById("chatRoomTitle");
+  const chatForm = document.getElementById("chatForm");
+  const chatInput = document.getElementById("chatInput");
+  const addGroupBtn = document.getElementById("addGroupBtn");
+
+  let currentRoom = "starwars";
+
+  function getInitials(name) {
+    return name.split(' ').map(n => n[0].toUpperCase()).join('');
+  }
+
+  function renderMessages(room) {
+    messagesDiv.innerHTML = "";
+    const msgs = chatData[room] || [];
+    msgs.forEach(({ user, text }) => {
+      const msgDiv = document.createElement("div");
+      msgDiv.classList.add("message");
+      if (user === "You") msgDiv.classList.add("you");
+
+      const avatar = document.createElement("div");
+      avatar.classList.add("avatar");
+      avatar.textContent = getInitials(user);
+
+      const content = document.createElement("div");
+      content.classList.add("content");
+      content.textContent = text;
+
+      msgDiv.appendChild(avatar);
+      msgDiv.appendChild(content);
+      messagesDiv.appendChild(msgDiv);
+    });
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  chatRoomsList.addEventListener("click", e => {
+    if (e.target.classList.contains("chat-room")) {
+      [...chatRoomsList.children].forEach(room => room.classList.remove("active"));
+      e.target.classList.add("active");
+      currentRoom = e.target.dataset.room;
+      chatRoomTitle.textContent = e.target.textContent;
+      renderMessages(currentRoom);
+    }
+  });
+
+  chatForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const msg = chatInput.value.trim();
+    if (!msg) return;
+    if (!chatData[currentRoom]) chatData[currentRoom] = [];
+    chatData[currentRoom].push({ user: "You", text: msg });
+    renderMessages(currentRoom);
+    chatInput.value = "";
+    chatInput.focus();
+  });
+
+  addGroupBtn.addEventListener("click", () => {
+    const groupName = prompt("Enter new group chat name:");
+    if (groupName && groupName.trim() !== "") {
+      const key = groupName.toLowerCase().replace(/\s+/g, '-');
+      if (!chatData[key]) {
+        chatData[key] = [];
+        const newRoom = document.createElement("div");
+        newRoom.className = "chat-room p-2 mb-2 rounded";
+        newRoom.dataset.room = key;
+        newRoom.textContent = groupName;
+        newRoom.style.cursor = "pointer";
+        chatRoomsList.appendChild(newRoom);
+      } else {
+        alert("Group chat already exists.");
+      }
+    }
+  });
+
+  // Initialize
+  chatRoomsList.querySelector(".chat-room").classList.add("active");
+  renderMessages(currentRoom);
+</script>
+
+
+<script>
+  // Chat data for rooms
+  const chatData = {
+    starwars: [
+      { user: "Luke", text: "May the Force be with you!" },
+      { user: "Leia", text: "We must fight the Empire." },
+    ],
+    gta5: [
+      { user: "Michael", text: "Let's plan the heist." },
+      { user: "Franklin", text: "I'm ready when you are." },
+    ],
+    deathstranding: [
+      { user: "Sam", text: "Bridges are important." },
+      { user: "Fragile", text: "Stay safe out there." },
+    ],
+    ratchet: [
+      { user: "Ratchet", text: "Let's save the galaxy!" },
+      { user: "Clank", text: "I'm with you, Ratchet." },
+    ],
+  };
+
+  const chatRoomsList = document.getElementById("chatRoomsList");
+  const messagesDiv = document.getElementById("messages");
+  const chatRoomTitle = document.getElementById("chatRoomTitle");
+  const chatForm = document.getElementById("chatForm");
+  const chatInput = document.getElementById("chatInput");
+  const addGroupBtn = document.getElementById("addGroupBtn");
+
+  let currentRoom = "starwars";
+
+  function renderMessages(room) {
+    messagesDiv.innerHTML = "";
+    const msgs = chatData[room] || [];
+    msgs.forEach(({ user, text }) => {
+      const msgDiv = document.createElement("div");
+      msgDiv.innerHTML = `<strong>${user}:</strong> ${text}`;
+      messagesDiv.appendChild(msgDiv);
+    });
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  // Switch chat room
+  chatRoomsList.addEventListener("click", e => {
+    if (e.target.classList.contains("chat-room")) {
+      [...chatRoomsList.children].forEach(room => room.style.background = "rgba(255,255,255,0.1)");
+      e.target.style.background = "#b185db";
+      currentRoom = e.target.dataset.room;
+      chatRoomTitle.textContent = e.target.textContent;
+      renderMessages(currentRoom);
+    }
+  });
+
+  // Send message
+  chatForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const msg = chatInput.value.trim();
+    if (!msg) return;
+    if (!chatData[currentRoom]) chatData[currentRoom] = [];
+    chatData[currentRoom].push({ user: "You", text: msg });
+    renderMessages(currentRoom);
+    chatInput.value = "";
+    chatInput.focus();
+  });
+
+  // Add new group chat
+  addGroupBtn.addEventListener("click", () => {
+    const groupName = prompt("Enter new group chat name:");
+    if (groupName && groupName.trim() !== "") {
+      const key = groupName.toLowerCase().replace(/\s+/g, '-');
+      if (!chatData[key]) {
+        chatData[key] = [];
+        const newRoom = document.createElement("div");
+        newRoom.className = "chat-room p-2 mb-2 rounded";
+        newRoom.dataset.room = key;
+        newRoom.style.cursor = "pointer";
+        newRoom.style.background = "rgba(255,255,255,0.1)";
+        newRoom.textContent = groupName;
+        chatRoomsList.appendChild(newRoom);
+      } else {
+        alert("Group chat already exists.");
+      }
+    }
+  });
+
+  // Initialize
+  // Highlight first room
+  chatRoomsList.children[0].style.background = "#b185db";
+  renderMessages(currentRoom);
+</script>
+
+
+<script>
+  // Simple chat form handler (demo only)
+  const chatForm = document.getElementById('chatForm');
+  const chatInput = document.getElementById('chatInput');
+  const chatMessages = document.getElementById('chatMessages');
+
+  chatForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const message = chatInput.value.trim();
+    if (message) {
+      const newMessage = document.createElement('div');
+      newMessage.innerHTML = `<strong>You:</strong> ${message}`;
+      chatMessages.appendChild(newMessage);
+      chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
+      chatInput.value = '';
+      chatInput.focus();
+    }
+  });
+</script>
+
+
+<footer class="footer bg-custom text-light py-4">
+  <div class="container text-center">
+    LETTUCE STORE/LETTUCE SOCIETY created using Adobe Dreamweaver and Bootstrap
+    <p class="mb-0">&copy; 2025 RYKEN INTERACTIVE ENTERTAINMENT. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .bg-custom {
+    background-color: #240046 !important;
+  }
+</style>
+
+
+  </body>
+</html>

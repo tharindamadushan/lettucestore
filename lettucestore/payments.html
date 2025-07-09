@@ -1,0 +1,149 @@
+<!-- Include Font Awesome CSS in <head> for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<div class="container my-5" style="max-width: 900px;">
+  <div class="row">
+    <!-- Payment Method -->
+    <div class="col-12 col-md-6 mb-4 mb-md-0">
+      <h5 class="mb-3 font-weight-bold">Payment Method</h5>
+      <div class="card shadow-sm p-3">
+
+        <div class="accordion" id="paymentAccordion">
+
+          <!-- Credit Card -->
+          <div class="card mb-2">
+            <div class="card-header p-0" id="headingCard">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left p-3 rounded-0 border-bottom-custom" 
+                        type="button" data-toggle="collapse" data-target="#collapseCard" 
+                        aria-expanded="true" aria-controls="collapseCard">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span>Credit Card</span>
+                    <div>
+                      <img src="https://i.imgur.com/2ISgYja.png" width="30" alt="Visa" class="mr-1" />
+                      <img src="https://i.imgur.com/W1vtnOV.png" width="30" alt="Mastercard" class="mr-1" />
+                      <img src="https://i.imgur.com/35tC99g.png" width="30" alt="Amex" />
+                    </div>
+                  </div>
+                </button>
+              </h2>
+            </div>
+            <div id="collapseCard" class="collapse show" aria-labelledby="headingCard" data-parent="#paymentAccordion">
+              <div class="card-body">
+
+                <div class="form-group">
+                  <label for="cardNumber">Card Number</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
+                    </div>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="0000 0000 0000 0000" autocomplete="cc-number" inputmode="numeric" required />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-6">
+                    <label for="expiryDate">Expiry Date</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                      </div>
+                      <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" autocomplete="cc-exp" inputmode="numeric" required />
+                    </div>
+                  </div>
+                  <div class="form-group col-6">
+                    <label for="cvc">CVC/CVV</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                      </div>
+                      <input type="text" class="form-control" id="cvc" placeholder="000" autocomplete="cc-csc" inputmode="numeric" required />
+                    </div>
+                  </div>
+                </div>
+
+                <small class="text-muted d-block mt-2">
+                  <i class="fas fa-lock"></i> Your transaction is secured with SSL certificate
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paypal -->
+          <div class="card">
+            <div class="card-header p-0" id="headingPaypal">
+              <h2 class="mb-0">
+                <button class="btn btn-light btn-block text-left p-3 rounded-0 border-bottom-custom collapsed" 
+                        type="button" data-toggle="collapse" data-target="#collapsePaypal" 
+                        aria-expanded="false" aria-controls="collapsePaypal">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span>Paypal</span>
+                    <img src="https://i.imgur.com/7kQEsHU.png" width="30" alt="Paypal Logo" />
+                  </div>
+                </button>
+              </h2>
+            </div>
+            <div id="collapsePaypal" class="collapse" aria-labelledby="headingPaypal" data-parent="#paymentAccordion">
+              <div class="card-body">
+                <div class="form-group mb-0">
+                  <label for="paypalEmail">Paypal Email</label>
+                  <input type="email" class="form-control" id="paypalEmail" placeholder="Paypal email" autocomplete="email" required />
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="col-12 col-md-6">
+      <h5 class="mb-3 font-weight-bold">Summary</h5>
+      <div class="card shadow-sm p-3">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <span>Pro (Billed Monthly) <i class="fas fa-caret-down"></i></span><br />
+            <a href="#" class="billing">Save 20% with annual billing</a>
+          </div>
+          <div class="text-right">
+            <sup class="super-price" style="font-size:1.5rem;">$9.99</sup><br />
+            <span class="super-month">/Month</span>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="d-flex justify-content-between mb-2">
+          <span>Referral Bonuses</span>
+          <span class="text-success">-$2.00</span>
+        </div>
+
+        <div class="d-flex justify-content-between mb-3">
+          <span>VAT <i class="fas fa-clock"></i></span>
+          <span>-20%</span>
+        </div>
+
+        <hr />
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <div>
+            <span>Today you pay (US Dollars)</span><br />
+            <small>After 30 days $9.59</small>
+          </div>
+          <div style="font-size: 1.25rem; font-weight: 700;">$0</div>
+        </div>
+
+        <button class="btn btn-primary btn-block py-3 font-weight-bold" type="submit">
+          Try it free for 30 days
+        </button>
+
+        <div class="text-center mt-3">
+          <a href="#">Have a promo code?</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

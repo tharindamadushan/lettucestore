@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Customer Support - Lettuce Society</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="../../../Downloads/web 2.0/css/bootstrap-4.4.1.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #240046;
+      color: #fbf7ea;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding-top: 70px; /* navbar height */
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #240046 !important;
+    }
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+      color: #fbf7ea !important;
+    }
+    .navbar .nav-link:hover,
+    .navbar .navbar-brand:hover {
+      color: #b185db !important;
+    }
+    .footer {
+      background-color: #240046;
+      color: #fbf7ea;
+      padding: 1rem 0;
+      margin-top: auto;
+      text-align: center;
+    }
+    main {
+      flex-grow: 1;
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    h1 {
+      color: #b185db;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    section.support-section {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1.5rem 1rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 15px rgba(177, 133, 219, 0.5);
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    section.support-section h2 {
+      color: #b185db;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+    }
+    section.support-section p {
+      flex-grow: 1;
+      font-size: 0.95rem;
+      color: #ddd;
+    }
+    section.support-section button {
+      margin-top: 1rem;
+      background-color: #b185db;
+      border: none;
+      color: #240046;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    section.support-section button:hover {
+      background-color: #8a4fc6;
+    }
+
+    /* Grid layout for support sections */
+    .support-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Live chat box centered */
+    #liveChatBox {
+      background: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      padding: 1rem;
+      box-shadow: 0 0 15px rgba(177, 133, 219, 0.5);
+      color: #ddd;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+    }
+    #liveChatMessages {
+      flex-grow: 1;
+      background: #1e003e;
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-y: auto;
+      font-family: monospace, monospace;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #ddd;
+    }
+    #liveChatInput {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      background-color: rgba(255,255,255,0.15);
+      color: #fbf7ea;
+    }
+    #liveChatSendBtn {
+      align-self: flex-end;
+      background-color: #b185db;
+      border: none;
+      color: #240046;
+      font-weight: 700;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #liveChatSendBtn:hover {
+      background-color: #8a4fc6;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <a href="index.html" class="navbar-brand">
+      <img src="../../../Downloads/web 2.0/images/LETTUCE.png" class="img-fluid rounded" alt="Lettuce Logo" width="200" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent1"
+      aria-controls="navbarSupportedContent1"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active"><a class="nav-link" href="index.html">STORE</a></li>
+        <li class="nav-item"><a class="nav-link" href="lettucemods.html">MODS</a></li>
+        <li class="nav-item"><a class="nav-link" href="lettucesociety.html">COMMUNITY</a></li>
+        <li class="nav-item"><a class="nav-link" href="lettucesupport.html">SUPPORT</a></li>
+        <li class="nav-item"><a class="nav-link" href="lettuceaboutus.html">ABOUT</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <a href="lettucelogin.html"><img src="images for web design/user.jpg" class="rounded-circle img-fluid" alt="Placeholder image"></a>
+      </form>
+    </div>
+  </nav>
+  <img src="images for web design/HOW CAN WE HELP YOU.jpg" class="img-fluid" alt="Placeholder image">
+
+  <main>
+    <h1>Customer Support</h1>
+
+    <div class="support-grid">
+      <section class="support-section" id="accountRecovery">
+        <h2>Account Recovery</h2>
+        <p>Recover your account by verifying your identity securely.</p>
+        <button>Start Recovery</button>
+      </section>
+
+      <section class="support-section" id="forgotEmail">
+        <h2>Forgot Email Address</h2>
+        <p>Can't remember your email? Find out how to retrieve it.</p>
+        <button>Get Help</button>
+      </section>
+
+      <section class="support-section" id="forgotPassword">
+        <h2>Forgot Password</h2>
+        <p>Reset your password quickly and securely.</p>
+        <button>Reset Password</button>
+      </section>
+
+      <section class="support-section" id="paymentProblems">
+        <h2>Payment Problems</h2>
+        <p>Issues with payment? Contact us to resolve your problems.</p>
+        <button>Report Issue</button>
+      </section>
+
+      <section class="support-section" id="liveChat">
+        <h2>Live Chat</h2>
+        <p>Chat live with our support team for immediate assistance.</p>
+        <button id="openLiveChatBtn">Open Chat</button>
+      </section>
+
+      <section class="support-section" id="parentalControls">
+        <h2>Parental Controls</h2>
+        <p>Manage parental controls and safety settings.</p>
+        <button>Manage Controls</button>
+      </section>
+
+      <section class="support-section" id="refunds">
+        <h2>Refunds</h2>
+        <p>Request refunds and learn about our refund policies.</p>
+        <button>Request Refund</button>
+      </section>
+    </div>
+
+    <!-- Centered Live Chat Box (hidden by default) -->
+    <div id="liveChatBox" style="display:none;">
+      <div id="liveChatMessages" aria-live="polite" aria-atomic="false" role="log"></div>
+      <input type="text" id="liveChatInput" placeholder="Type your message..." aria-label="Live chat input" />
+      <button id="liveChatSendBtn" type="button">Send</button>
+      <button id="closeLiveChatBtn" type="button" style="margin-top: 10px; background:#b185db; border:none; color:#240046; font-weight:700; border-radius:8px; padding:0.5rem 1rem; cursor:pointer;">Close Chat</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      LETTUCE STORE/LETTUCE SOCIETY created using Adobe Dreamweaver and Bootstrap
+      <p class="mb-0">&copy; 2025 RYKEN INTERACTIVE ENTERTAINMENT. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="../../../Downloads/web 2.0/js/bootstrap-4.4.1.js"></script>
+
+  <script>
+    // Live Chat box toggle
+    const liveChatBox = document.getElementById('liveChatBox');
+    const openLiveChatBtn = document.getElementById('openLiveChatBtn');
+    const closeLiveChatBtn = document.getElementById('closeLiveChatBtn');
+    const liveChatMessages = document.getElementById('liveChatMessages');
+    const liveChatInput = document.getElementById('liveChatInput');
+    const liveChatSendBtn = document.getElementById('liveChatSendBtn');
+
+    openLiveChatBtn.addEventListener('click', () => {
+      liveChatBox.style.display = 'flex';
+      liveChatBox.style.flexDirection = 'column';
+      liveChatInput.focus();
+    });
+
+    closeLiveChatBtn.addEventListener('click', () => {
+      liveChatBox.style.display = 'none';
+    });
+
+    liveChatSendBtn.addEventListener('click', () => {
+      const msg = liveChatInput.value.trim();
+      if (!msg) return;
+      appendMessage('You', msg);
+      liveChatInput.value = '';
+      liveChatInput.focus();
+
+      // Simulate support reply after 1.5 seconds
+      setTimeout(() => {
+        appendMessage('Support', 'Thank you for reaching out! We will get back to you shortly.');
+      }, 1500);
+    });
+
+    liveChatInput.addEventListener('keypress', e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        liveChatSendBtn.click();
+      }
+    });
+
+    function appendMessage(user, text) {
+      const msgDiv = document.createElement('div');
+      msgDiv.style.marginBottom = '0.5rem';
+      msgDiv.innerHTML = `<strong>${user}:</strong> ${text}`;
+      liveChatMessages.appendChild(msgDiv);
+      liveChatMessages.scrollTop = liveChatMessages.scrollHeight;
+    }
+  </script>
+</body>
+</html>
